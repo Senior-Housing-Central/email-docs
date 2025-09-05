@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New Application for Park West</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 20px;
+      background-color: #f9f9f9;
+    }
+    .container {
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      margin-bottom: 30px;
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #eee;
+    }
+    .logo {
+      margin-bottom: 15px;
+    }
+    .content {
+      margin-bottom: 30px;
+    }
+    .application-preview {
+      background-color: #f8f9fa;
+      border: 1px solid #dee2e6;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 25px 0;
+      font-family: 'Times New Roman', serif;
+    }
+    .application-header {
+      text-align: center;
+      margin-bottom: 20px;
+      font-weight: bold;
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .form-field {
+      display: flex;
+      margin-bottom: 8px;
+      align-items: baseline;
+    }
+    .field-label {
+      min-width: 150px;
+      font-weight: normal;
+      font-size: 12px;
+    }
+    .field-value {
+      border-bottom: 1px solid #333;
+      flex: 1;
+      min-height: 16px;
+      padding-left: 5px;
+      font-size: 12px;
+    }
+    .redacted-heavy {
+      background: linear-gradient(135deg, #e8f0ff 0%, #f0f4ff 50%, #e8f0ff 100%);
+      color: #a8c8f0;
+      text-shadow: 0px 0px 2px #b8d8ff, 1px 1px 3px #c8e8ff, -1px -1px 2px #d0e0ff, 2px 0px 4px #b0d0f8;
+      border-radius: 3px;
+      user-select: none;
+      letter-spacing: 4px;
+      font-weight: 200;
+      font-size: 10px;
+      padding: 2px 5px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0.5;
+      border: 1px solid rgba(180, 200, 255, 0.3);
+    }
+
+    .redacted-heavy::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(200,220,255,0.4) 0px,
+        rgba(220,235,255,0.6) 1px,
+        rgba(200,220,255,0.4) 2px,
+        rgba(210,230,255,0.5) 3px
+      );
+      pointer-events: none;
+    }
+
+    .redacted-heavy::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(180,210,255,0.3) 0px,
+        rgba(190,220,255,0.5) 1px,
+        rgba(180,210,255,0.3) 2px
+      );
+      pointer-events: none;
+    }
+    
+    .partial-redacted-heavy {
+      background: linear-gradient(135deg, #f0f8ff 0%, #f8fbff 50%, #f0f8ff 100%);
+      color: #c0d8f8;
+      text-shadow: 0px 0px 1px #d0e8ff, 1px 1px 2px #e0f0ff;
+      border-radius: 2px;
+      padding: 1px 4px;
+      user-select: none;
+      letter-spacing: 3px;
+      font-weight: 200;
+      font-size: 10px;
+      position: relative;
+      overflow: hidden;
+      opacity: 0.6;
+      border: 1px solid rgba(200, 220, 255, 0.2);
+    }
+
+    .partial-redacted-heavy::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: repeating-linear-gradient(
+        90deg,
+        rgba(220,235,255,0.4) 0px,
+        rgba(230,240,255,0.6) 1px,
+        rgba(220,235,255,0.4) 2px
+      );
+      pointer-events: none;
+    }
+             .button {
+       display: inline-block;
+       background-color: #007bff;
+       color: #ffffff !important;
+       text-decoration: none;
+       padding: 12px 25px;
+       border-radius: 5px;
+       margin: 15px 0;
+       font-weight: 500;
+       border: none;
+     }
+    .signature {
+      margin-top: 30px;
+      color: #666;
+    }
+    .footer {
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #eee;
+      font-size: 12px;
+      color: #666;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">
+        <img src="https://app.seniorhousingcentral.com/logo-trans.png" 
+             alt="Senior Housing Central" 
+             style="height: 50px; width: auto;" />
+      </div>
+    </div>
+    
+    <div class="content">
+      <p>Hi there,</p>
+      
+      <p>We're reaching out from Senior Housing Central to let you know that you have a qualified lead interested in a unit at <strong>Park West</strong>: <strong>Ahmed <span class="redacted-heavy">xxxxxxxx</span></strong>.</p>
+      
+      <p>They've used our AI-powered platform to search for senior housing and identified Park West as a potential fit. Based on the information they provided, they appear to meet your criteria and are ready to take the next step.</p>
+      
+      <p>We've already gathered all their information for you:</p>
+      <ul>
+        <li>Financial information</li>
+        <li>Rental history</li>
+        <li>Supporting documentation</li>
+      </ul>
+
+      <!-- Application Preview -->
+      <div class="application-preview">
+                     <div class="application-header">
+           <div style="margin-bottom: 10px;">
+             <div style="font-size: 14px; margin-bottom: 2px;">National Association</div>
+             <div style="font-size: 14px;">of Independent Landlords</div>
+           </div>
+           Rental Application
+         </div>
+        
+        <div style="margin-bottom: 15px; font-size: 11px;">
+          <div class="form-field">
+            <span class="field-label">Today's Date</span>
+            <span class="field-value">Thursday, September 4, 2025 at 10:27 PM</span>
+            <span style="margin: 0 20px;">Date of anticipated move in</span>
+            <span class="field-value partial-redacted-heavy">xx/xx/xxxx</span>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Property address</span>
+            <span class="field-value redacted-heavy">xxxx x xxxxx xxxxxx, xxxxxxxxx xx, xxxxxxx xx xxxxx</span>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Monthly rent</span>
+            <span class="field-value">$2193/month</span>
+            <span style="margin: 0 20px;">Security deposit</span>
+            <span class="field-value partial-redacted-heavy">$x,xxx</span>
+            <span style="margin: 0 20px;">Pet deposit</span>
+            <span class="field-value partial-redacted-heavy">$xxx</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <div style="font-weight: bold; margin-bottom: 8px; font-size: 12px;">Applicant</div>
+          <div class="form-field">
+            <span class="field-label">Full name of applicant</span>
+            <span class="field-value">Ahmed <span class="redacted-heavy">xxxxxxxx</span></span>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Present Address</span>
+            <span class="field-value redacted-heavy">xxx xxx xxxxxx, xxxx xx, xxxxxxx xx xxxxx</span>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Telephone number (home)</span>
+            <span class="field-value partial-redacted-heavy">(xxx) xxx-xxxx</span>
+            <span style="margin: 0 20px;">(work)</span>
+            <span class="field-value partial-redacted-heavy">(xxx) xxx-xxxx</span>
+          </div>
+          <div class="form-field">
+            <span class="field-label">D.O.B.</span>
+            <span class="field-value partial-redacted-heavy">xx/xx/xxxx</span>
+            <span style="margin: 0 20px;">Social security #</span>
+            <span class="field-value partial-redacted-heavy">xxx-xx-xxxx</span>
+            <span style="margin: 0 20px;">Driver's license</span>
+            <span class="field-value partial-redacted-heavy">xxxxxxxxx</span>
+          </div>
+        </div>
+
+        <div style="margin-bottom: 15px;">
+          <div style="font-weight: bold; margin-bottom: 8px; font-size: 12px;">Applicant's employment</div>
+          <div class="form-field">
+            <span class="field-label">Name of present employer</span>
+            <span class="field-value redacted-heavy">xxxxxxx / xxxxxx xxxxxxx xxxxxx xxxxxx xxxxxxxx</span>
+          </div>
+          <div class="form-field">
+            <span class="field-label">Position</span>
+            <span class="field-value partial-redacted-heavy">xxxxxxx / xxxxxxx</span>
+            <span style="margin: 0 20px;">Date started</span>
+            <span class="field-value partial-redacted-heavy">xx/xx/xxxx</span>
+            <span style="margin: 0 20px;">Monthly income</span>
+            <span class="field-value partial-redacted-heavy">$x,xxx</span>
+          </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px; padding: 15px; background-color: #fff3cd; border: 1px solid #ffeaa7; border-radius: 4px;">
+          <div style="font-size: 12px; font-weight: bold; color: #856404;">📋 Complete Application Available</div>
+          <div style="font-size: 11px; color: #856404; margin-top: 5px;">Sign up to view full applicant details and contact information</div>
+        </div>
+      </div>
+
+      <p>You can view Ahmed's full application and contact information by creating your housing provider account:</p>
+      
+                 <div style="text-align: center;">
+         <a href="https://portal.seniorhousingcentral.com/onboarding" 
+            class="button" 
+            style="display: inline-block; background-color: #007bff; color: #ffffff !important; text-decoration: none; padding: 12px 25px; border-radius: 5px; margin: 15px 0; font-weight: 500; border: none;">
+            Create Account to View Application
+         </a>
+       </div>
+      
+      <p>If you have questions or need support, feel free to reply to this email. Our team is here to help make the process seamless for both you and the applicant.</p>
+      
+      <p>Thanks for being part of the Senior Housing Central network!</p>
+    </div>
+
+    <div class="signature">
+      <p>Best regards,<br>
+      <strong>Sonya</strong><br>
+      The Senior Housing Central Team<br>
+      <a href="https://www.seniorhousingcentral.com" style="color: #007bff;">www.seniorhousingcentral.com</a></p>
+      
+      <p style="font-style: italic; font-size: 14px; color: #666;">Connecting Seniors and housing—faster and smarter.</p>
+    </div>
+
+    <div class="footer">
+      <p>This message was sent by Senior Housing Central. If you need assistance, contact us at <a href="mailto:support@updates.seniorhousingcentral.com">support@updates.seniorhousingcentral.com</a></p>
+    </div>
+  </div>
+</body>
+</html>

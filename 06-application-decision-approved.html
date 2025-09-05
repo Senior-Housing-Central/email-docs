@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Approved</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f8f9fa;
+    }
+    .no-truncate {
+      overflow: visible !important;
+      height: auto !important;
+      max-height: none !important;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #16a34a;
+      margin-bottom: 10px;
+    }
+    .status-icon {
+      font-size: 48px;
+      margin: 20px 0;
+    }
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    .title.approved {
+      color: #16a34a;
+    }
+    .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    .application-details {
+      background: #f0f9ff;
+      border: 1px solid #e0f2fe;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .detail-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    .detail-row:last-child {
+      border-bottom: none;
+    }
+    .detail-label {
+      font-weight: 600;
+      color: #374151;
+    }
+    .detail-value {
+      color: #6b7280;
+      text-align: right;
+    }
+    .next-steps {
+      border: 1px solid #bfdbfe;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .next-steps.approved {
+      background: #f0f9ff;
+    }
+    .next-steps h3 {
+      margin: 0 0 10px 0;
+      font-size: 18px;
+    }
+    .next-steps.approved h3 {
+      color: #1d4ed8;
+    }
+    .next-steps ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    .next-steps li {
+      margin: 12px 0;
+      padding: 4px 0;
+      color: #374151;
+      line-height: 1.8;
+    }
+    .contact-info {
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .contact-info h3 {
+      color: #374151;
+      margin: 0 0 10px 0;
+      font-size: 16px;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      color: #6b7280;
+      font-size: 14px;
+    }
+    .button {
+      display: inline-block;
+      color: white !important;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: 600;
+      margin: 10px 0;
+    }
+    .button:hover {
+      color: white !important;
+      text-decoration: none;
+    }
+    .button.approved {
+      background: #16a34a;
+    }
+    .button.approved:hover {
+      background: #15803d;
+    }
+    @media (max-width: 600px) {
+      .container {
+        padding: 20px;
+      }
+      .detail-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .detail-value {
+        text-align: left;
+        margin-top: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container no-truncate">
+    <div class="header">
+      <div class="logo">Senior Housing Central</div>
+      <div class="status-icon">🎉</div>
+      <h1 class="title approved">Congratulations!</h1>
+      <p class="subtitle">Your application for Park West Apartments has been approved by West Coast Properties!</p>
+    </div>
+
+    <div class="application-details">
+      <h3 style="margin: 0 0 15px 0; color: #374151;">Application Details</h3>
+      <div class="detail-row">
+        <span class="detail-label">Property: </span>
+        <span class="detail-value">&nbsp;Park West Apartments</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Applicant: </span>
+        <span class="detail-value">&nbsp;Sarah Johnson</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Provider: </span>
+        <span class="detail-value">&nbsp;West Coast Properties</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Application ID: </span>
+        <span class="detail-value">&nbsp;APP-2025-10234</span>
+      </div>
+      <div class="detail-row">
+        <span class="detail-label">Status: </span>
+        <span class="detail-value" style="color: #16a34a; font-weight: bold;">
+          &nbsp;APPROVED
+        </span>
+      </div>
+    </div>
+
+    <div class="next-steps approved">
+      <h3>🎯 Next Steps</h3>
+      <ul>
+        <li><strong>Lease Documents:</strong> You'll receive lease documents within 24 hours</li>
+        <li><strong>Security Deposit:</strong> Be prepared to pay security deposit and first month's rent</li>
+        <li><strong>Move-in Schedule:</strong> Coordinate your move-in date with the property</li>
+        <li><strong>Welcome Package:</strong> You'll receive move-in instructions and community information</li>
+      </ul>
+      <p><strong>Provider Notes:</strong> Please contact our office to schedule your move-in walkthrough. We're excited to welcome you to Park West!</p>
+    </div>
+
+    <div class="contact-info">
+      <h3>📞 Property Contact Information</h3>
+      <p>For questions about this decision, please contact:</p>
+      <p><strong>Phone:</strong> (555) 123-4567</p>
+      <p><strong>Email:</strong> manager@parkwest.com</p>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0;">
+      <a href="https://app.seniorhousingcentral.com/profile/applications" class="button approved">
+        View Application Details
+      </a>
+    </div>
+
+    <div class="footer">
+      <p>Thank you for using Senior Housing Central!</p>
+      <p>If you have any questions, please contact us at <a href="mailto:support@seniorhousingcentral.com">support@seniorhousingcentral.com</a></p>
+    </div>
+  </div>
+  <!-- Prevent Gmail truncation -->
+  <div style="display: none; opacity: 0; height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: transparent;">
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    This content is hidden and helps prevent Gmail from truncating the email above.
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  </div>
+</body>
+</html>

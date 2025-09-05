@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senior Housing Central - Email Templates Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+            background: white;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            height: 80px;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            color: #012E33;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        
+        .subtitle {
+            color: #34585C;
+            font-size: 18px;
+        }
+        
+        .categories {
+            display: grid;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+        
+        .category {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .category-title {
+            color: #012E33;
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid #66CDCC;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .email-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .email-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 20px;
+            border: 1px solid #e9ecef;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .email-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(102, 205, 204, 0.2);
+            border-color: #66CDCC;
+            background: #f0fffe;
+        }
+        
+        .email-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #012E33;
+            margin-bottom: 10px;
+        }
+        
+        .email-description {
+            font-size: 14px;
+            color: #6b7280;
+            line-height: 1.5;
+            margin-bottom: 10px;
+        }
+        
+        .email-badge {
+            display: inline-block;
+            background: #66CDCC;
+            color: #012E33;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-top: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 30px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .stat-card {
+            background: linear-gradient(135deg, #66CDCC 0%, #34585C 100%);
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 14px;
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="https://app.seniorhousingcentral.com/logo-trans.png" alt="Senior Housing Central" class="logo">
+            <h1>Email Templates Catalog</h1>
+            <p class="subtitle">Complete collection of Senior Housing Central email templates</p>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div class="stat-number">13</div>
+                <div class="stat-label">Email Templates</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">4</div>
+                <div class="stat-label">User Types</div>
+            </div>
+        </div>
+
+        <div class="categories">
+            <!-- User Onboarding & Registration -->
+            <div class="category">
+                <h2 class="category-title">
+                    <span>🎯</span>
+                    User Onboarding & Registration
+                </h2>
+                <div class="email-grid">
+                    <a href="01-welcome-email.html" class="email-card">
+                        <div class="email-title">Welcome Email</div>
+                        <div class="email-description">Sent to new users after registration with role-specific content</div>
+                        <span class="email-badge">All Users</span>
+                    </a>
+                    
+                    <a href="07-housing-provider-registration.html" class="email-card">
+                        <div class="email-title">Housing Provider Registration</div>
+                        <div class="email-description">Confirmation email after housing provider registers</div>
+                        <span class="email-badge">Housing Providers</span>
+                    </a>
+                    
+                    <a href="08-housing-provider-approved.html" class="email-card">
+                        <div class="email-title">Housing Provider Approval</div>
+                        <div class="email-description">Notification when housing provider account is approved</div>
+                        <span class="email-badge">Housing Providers</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Property Applications -->
+            <div class="category">
+                <h2 class="category-title">
+                    <span>🏠</span>
+                    Property Applications
+                </h2>
+                <div class="email-grid">
+                    <a href="02-property-notification-email.html" class="email-card">
+                        <div class="email-title">Property Lead Notification</div>
+                        <div class="email-description">Alert to property owners about new qualified tenant applications</div>
+                        <span class="email-badge">Housing Providers</span>
+                    </a>
+                    
+                    <a href="05-application-confirmation-email.html" class="email-card">
+                        <div class="email-title">Application Confirmation</div>
+                        <div class="email-description">Confirmation to tenant after submitting an application</div>
+                        <span class="email-badge">Tenants</span>
+                    </a>
+                    
+                    <a href="06-application-decision-approved.html" class="email-card">
+                        <div class="email-title">Application Decision</div>
+                        <div class="email-description">Notification of application approval or rejection</div>
+                        <span class="email-badge">Tenants</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Payments & Lease Management -->
+            <div class="category">
+                <h2 class="category-title">
+                    <span>💳</span>
+                    Payments & Lease Management
+                </h2>
+                <div class="email-grid">
+                    <a href="03-tenant-invite-email.html" class="email-card">
+                        <div class="email-title">Tenant Lease Invitation</div>
+                        <div class="email-description">Invite tenants to set up online rent payments</div>
+                        <span class="email-badge">Tenants</span>
+                    </a>
+                    
+                    <a href="04-payment-receipt-email.html" class="email-card">
+                        <div class="email-title">Payment Receipt</div>
+                        <div class="email-description">Receipt confirmation after payment processing</div>
+                        <span class="email-badge">Tenants</span>
+                    </a>
+                    
+                    <a href="10-tenant-lease-cancellation.html" class="email-card">
+                        <div class="email-title">Lease Cancellation</div>
+                        <div class="email-description">Notification when lease payment setup is canceled</div>
+                        <span class="email-badge">Tenants</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Caregiver & Support Network -->
+            <div class="category">
+                <h2 class="category-title">
+                    <span>🤝</span>
+                    Caregiver & Support Network
+                </h2>
+                <div class="email-grid">
+                    <a href="09-caregiver-invitation.html" class="email-card">
+                        <div class="email-title">Caregiver Invitation</div>
+                        <div class="email-description">Senior invites caregiver to help with housing search</div>
+                        <span class="email-badge">Caregivers</span>
+                    </a>
+                    
+                    <a href="12-caseworker-invite.html" class="email-card">
+                        <div class="email-title">Caseworker Network Invite</div>
+                        <div class="email-description">Invitation to join SHC caseworker network</div>
+                        <span class="email-badge">Caseworkers</span>
+                    </a>
+                    
+                    <a href="13-financial-aid-provider-invite.html" class="email-card">
+                        <div class="email-title">Financial Aid Provider Invite</div>
+                        <div class="email-description">Invitation to join financial aid provider network</div>
+                        <span class="email-badge">Aid Providers</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Sharing & Communication -->
+            <div class="category">
+                <h2 class="category-title">
+                    <span>📤</span>
+                    Sharing & Communication
+                </h2>
+                <div class="email-grid">
+                    <a href="11-share-property-email.html" class="email-card">
+                        <div class="email-title">Share Property</div>
+                        <div class="email-description">Email sent when user shares a property listing</div>
+                        <span class="email-badge">All Users</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <h3 style="color: #012E33; margin-bottom: 15px;">About This Catalog</h3>
+            <p style="color: #6b7280; line-height: 1.6; max-width: 800px; margin: 0 auto;">
+                This catalog contains all email templates used by Senior Housing Central's platform. 
+                Each template is designed with accessibility and clarity in mind, optimized for senior users 
+                and their support network. Templates are responsive and tested across major email clients.
+            </p>
+            <p style="margin-top: 20px; color: #34585C;">
+                <strong>Last Updated:</strong> December 2025 | 
+                <strong>Version:</strong> 1.0
+            </p>
+        </div>
+    </div>
+</body>
+</html>
